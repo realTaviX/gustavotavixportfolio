@@ -868,6 +868,66 @@
   opacity:.8;
 }
 
+
+.manual-projects{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+}
+.manual-project-card{
+  position:relative;
+  min-height:220px;
+  padding:20px;
+  border:1px solid rgba(255,64,64,.16);
+  border-top:3px solid var(--red);
+  background:linear-gradient(180deg,rgba(16,18,22,.94),rgba(9,11,14,.94));
+  transition:.18s ease;
+}
+.manual-project-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(255,64,64,.34);
+}
+.manual-project-index{
+  font-family:Consolas,monospace;
+  font-size:9px;
+  color:var(--green);
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.manual-project-card h3{
+  margin:16px 0 0;
+  font-size:19px;
+}
+.manual-project-card p{
+  margin:8px 0 0;
+  color:#9dabb9;
+  font-size:12px;
+  line-height:1.65;
+}
+.project-url{
+  display:block;
+  margin-top:14px;
+  color:#ff8c8c;
+  font-family:Consolas,monospace;
+  font-size:9px;
+  word-break:break-all;
+}
+.manual-project-card .actions{
+  margin-top:18px;
+}
+.manual-project-template{
+  border-style:dashed;
+  border-color:rgba(83,255,154,.18);
+  border-top-color:var(--green);
+  opacity:.72;
+}
+@media(max-width:980px){
+  .manual-projects{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:650px){
+  .manual-projects{grid-template-columns:1fr}
+}
+
 </style>
 </head>
 
@@ -886,7 +946,7 @@
             <div class="navlinks">
                 <a href="#perfil">Perfil</a>
                 <a href="#experiencia">Experiência</a>
-                <a href="#projetos">Projetos</a>
+                <a href="#projetos">Projetos</a><a href="#meus-projetos">Meus Projetos</a>
                 <a href="#competencias">Competências</a>
                 <a href="#marca">Marca</a>
                 <a href="#contato">Contato</a>
@@ -1108,7 +1168,84 @@
             </div>
         </section>
 
-        <section class="section" id="competencias">
+        
+<section class="section" id="meus-projetos">
+  <div class="section-head">
+    <div>
+      <div class="kicker">04 / MEUS PROJETOS</div>
+      <h2>PROJETOS PUBLICADOS.</h2>
+    </div>
+    <p>
+      Área para reunir projetos que já estão online. Os cards foram deixados simples de duplicar
+      manualmente no HTML quando você quiser adicionar novos.
+    </p>
+  </div>
+
+  <div class="manual-projects">
+
+    <!-- PROJETO 01 — DUPLIQUE ESTE BLOCO PARA ADICIONAR OUTROS -->
+    <article class="manual-project-card">
+      <div class="manual-project-index">&gt; PROJECT_001 / ONLINE</div>
+      <h3>Remix Calculator</h3>
+      <p>
+        Calculadora web publicada por Tavix. Primeiro projeto listado nesta área do portfólio.
+      </p>
+      <a class="project-url"
+         href="https://realtavix.github.io/remixcalculator/"
+         target="_blank"
+         rel="noopener">
+        realtavix.github.io/remixcalculator/
+      </a>
+      <div class="actions">
+        <a class="btn primary"
+           href="https://realtavix.github.io/remixcalculator/"
+           target="_blank"
+           rel="noopener">
+          Abrir projeto ↗
+        </a>
+      </div>
+    </article>
+
+    <!--
+    MODELO PARA NOVOS PROJETOS:
+    Copie o bloco <article class="manual-project-card"> abaixo,
+    remova estes comentários e altere nome, descrição e link.
+
+    <article class="manual-project-card">
+      <div class="manual-project-index">&gt; PROJECT_002 / ONLINE</div>
+      <h3>NOME DO PROJETO</h3>
+      <p>DESCRIÇÃO DO PROJETO.</p>
+      <a class="project-url"
+         href="LINK_DO_PROJETO"
+         target="_blank"
+         rel="noopener">
+        LINK_DO_PROJETO
+      </a>
+      <div class="actions">
+        <a class="btn primary"
+           href="LINK_DO_PROJETO"
+           target="_blank"
+           rel="noopener">
+          Abrir projeto ↗
+        </a>
+      </div>
+    </article>
+    -->
+
+    <article class="manual-project-card manual-project-template">
+      <div class="manual-project-index">&gt; NEXT_PROJECT / SLOT</div>
+      <h3>Próximo projeto</h3>
+      <p>
+        Espaço visual reservado. Para adicionar outro projeto,
+        duplique o bloco marcado no código e troque os dados.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+
+<section class="section" id="competencias">
             <div class="section-head">
                 <div>
                     <div class="kicker">04 / COMPETÊNCIAS</div>
